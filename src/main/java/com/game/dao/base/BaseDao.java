@@ -10,6 +10,10 @@ import java.util.Map;
 public class BaseDao<T> {
     public String tableName;
 
+    public BaseDao(String competition) {
+        this.tableName = competition;
+    }
+
 
     public static <T> List<T> resultSetToList(ResultSet rs, Class<T> clazz) throws Exception {
         List<T> list = new ArrayList<>();
